@@ -1940,18 +1940,7 @@ button.sidebar-button {
  * spinbutton *
  **************/
 spinbutton {
-    border-width: 1px;
-    border-radius: 0px;
-    border-style: solid;
-    border-color: @theme_fg_color;
-    border-top-color: #f1f1f1;
-    border-left-color: #f1f1f1;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.65),
-                inset 0 -1px shade(@theme_bg_color, 0.65),
-                inset 1px 0 #f1f1f1,
-                inset 0 1px #f1f1f1;
+    padding: 0;
 }
 
 spinbutton:disabled {
