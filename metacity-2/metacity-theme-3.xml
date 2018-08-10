@@ -6,8 +6,7 @@
         <author>Srivatsa Kanchi, R &lt;srivatsa_nk@dataone.in&gt;</author>
         <copyright>&#194; 2007 Srivatsa Kanchi</copyright>
         <date>March 15, 2007</date>
-        <description>Windows 2000/NT style theme
-		</description>
+        <description>Windows 2000/NT style theme</description>
     </info>
 
     <frame_geometry name="normal_geometry" has_title="true" 
