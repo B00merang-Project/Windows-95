@@ -1669,7 +1669,7 @@ border-radius: 1px;
 .window-list-item-box:hover {
     border-image: url('border-panelbutton.png') 10 12 10 12;
     padding: 1px;
-    margin: 5px;
+    /*margin: 5px;*/
     transition-duration: 100;
 }
 
