@@ -1898,14 +1898,11 @@ treeview {
     background-color: @theme_selected_bg_color; }
   treeview header button {
     border-width: 0 1px 1px 0;
-    border-radius: 0;
-    box-shadow: none; }
+    border-radius: 0; }
     treeview header button, treeview header button:active, treeview header button:focus, treeview header button:active:focus {
-      box-shadow: none;
       background-image: none;
       background-color: @theme_bg_color; }
     treeview header button:hover, treeview header button:active:hover, treeview header button:hover:focus, treeview header button:active:hover:focus {
-      box-shadow: none;
       color: @theme_selected_fg_color;
       background-color: @theme_selected_bg_color; }
   treeview header:last-child button {
@@ -2252,7 +2249,7 @@ messagedialog {
     border-radius: 0; }
 
 .titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar) {
-  min-height: 28px;
+  min-height: 30px;
   color: @titlebar_fg_color;
   background-color: @titlebar_bg_color; }
   .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
