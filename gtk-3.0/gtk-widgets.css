@@ -1851,7 +1851,7 @@ toolbar {
   .linked button:last-child, .linked .raised button:last-child {
     border-left-width: 0;
     border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
   .linked button:only-child, .linked .raised button:only-child {
