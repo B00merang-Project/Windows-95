@@ -1326,6 +1326,8 @@ scrollbar {
     min-height: 14px;
     margin: 0;
     border: 1px solid @borders;
+    border-top-color: mix(@theme_bg_color, @light_shadow, 0.7);
+    border-left-color: mix(@theme_bg_color, @light_shadow, 0.7);
     border-radius: 0px;
     background-clip: padding-box;
     background-color: @theme_bg_color;
