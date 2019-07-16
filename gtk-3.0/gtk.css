@@ -779,7 +779,7 @@ menu, .menu {
   border-radius: 0px;
   border-style: none;
   color: #000000;
-  background-color: #FFFFFF; }
+  background-color: #D3D0C7; }
   .csd menu, .csd .menu {
     padding: 4px 4px;
     border-radius: 0px;
@@ -790,16 +790,16 @@ menu, .menu {
   menu > arrow, .menu > arrow {
     padding: 4px;
     border-color: transparent;
-    background-color: #FFFFFF;
+    background-color: #D3D0C7;
     min-width: 16px;
     min-height: 16px; }
     menu > arrow.top, .menu > arrow.top {
       margin-top: -6px;
-      border-bottom: 1px solid shade(#FFFFFF, 0.9);
+      border-bottom: 1px solid shade(#D3D0C7, 0.9);
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
     menu > arrow.bottom, .menu > arrow.bottom {
       margin-bottom: -6px;
-      border-top: 1px solid shade(#FFFFFF, 0.9);
+      border-top: 1px solid shade(#D3D0C7, 0.9);
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 menubar, .menubar {
@@ -834,7 +834,7 @@ menu menuitem, .menu menuitem {
   border: none;
   border-radius: 0;
   color: #000000;
-  background-color: #FFFFFF; }
+  background-color: #D3D0C7; }
   menu menuitem:hover, .menu menuitem:hover {
     color: #FFFFFF;
     background-color: #000082; }
@@ -843,7 +843,7 @@ menu menuitem, .menu menuitem {
     menu menuitem:hover scale trough, menu menuitem:hover switch, .menu menuitem:hover scale trough, .menu menuitem:hover switch {
       background-color: alpha(#FFFFFF, 0.75); }
   menu menuitem:disabled, .menu menuitem:disabled {
-    color: mix(#000000, #FFFFFF, 0.5); }
+    color: mix(#000000, #D3D0C7, 0.5); }
   menu menuitem arrow, .menu menuitem arrow {
     min-width: 16px;
     min-height: 16px; }
@@ -1429,7 +1429,7 @@ separator {
   menuitem separator {
     border-width: 1px;
     border-style: none;
-    color: mix(shade(#D3D0C7, 0.65), #FFFFFF, 0.5); }
+    color: mix(shade(#D3D0C7, 0.65), #D3D0C7, 0.5); }
   popover separator {
     border: 0;
     color: alpha(currentColor, 0.5);

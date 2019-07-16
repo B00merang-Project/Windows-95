@@ -588,8 +588,8 @@ StScrollBar {
 	font-size: 90%;
 	color: black;
 	height: 28px;
-	border: 2px solid transparent;
-	border-image: url('assets/dash.png') 2 2 2 2;
+	border: 3px solid transparent;
+	border-image: url('assets/dash.png') 3 3 3 3;
 	text-shadow: none;
 	background-gradient-direction: none;
 }
