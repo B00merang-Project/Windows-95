@@ -485,30 +485,23 @@ expander arrow {
 list {
   color: #000000;
   background-color: #FFFFFF; }
+  list:backdrop {
+    color: #000000;
+    background-color: #FFFFFF; }
   list row {
     padding: 2px; }
-    list row:hover {
-      background-color: mix(#C0C0C0, #000000, 0.1); }
-    list row:active {
-      background-color: mix(#C0C0C0, #000000, 0.2); }
     list row:backdrop {
       color: #000000; }
     list row:selected, list row:selected:hover, list row:selected:focus {
       border: none;
       color: #FFFFFF;
       background-color: #000080; }
-      list row:selected:hover, list row:selected:hover:hover, list row:selected:focus:hover {
-        background-color: shade(#000080, 1.05); }
-      list row:selected:active, list row:selected:hover:active, list row:selected:focus:active {
-        background-color: shade(#000080, 0.95); }
-      list row:selected:disabled, list row:selected:hover:disabled, list row:selected:focus:disabled {
-        color: alpha(#FFFFFF, 0.7);
-        background-color: #000080; }
-      list row:selected:backdrop, list row:selected:hover:backdrop, list row:selected:focus:backdrop {
-        color: #FFFFFF;
-        background-color: #000080; }
-  list separator, list separator:backdrop {
-    background: none; }
+    list row:selected:disabled {
+      color: alpha(#FFFFFF, 0.7);
+      background-color: alpha(#000080, 0.9); }
+    list row:selected:backdrop {
+      color: #FFFFFF;
+      background-color: #000080; }
 
 frame > border {
   border-width: 1px;
@@ -2175,32 +2168,35 @@ headerbar.selection-mode, toolbar.selection-mode {
     headerbar.selection-mode .selection-menu button .dim-label, toolbar.selection-mode .selection-menu button .dim-label {
       color: shade(#000080, 0.7); }
 
-decoration {
+window decoration {
   background-color: #C0C0C0;
   border-radius: 0px 0px 0 0;
   border-style: solid;
   padding: 2px;
   box-shadow: inset -2px -2px shade(#C0C0C0, 0.85), inset 2px 2px mix(#C0C0C0, white, 0.55), inset -1px -1px #000000, inset 1px 1px mix(#C0C0C0, white, 0.7); }
-  .fullscreen decoration, .tiled decoration {
-    border-radius: 0; }
-  .popup decoration {
-    box-shadow: none;
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
+  .fullscreen window decoration, .tiled window decoration {
+    border-radius: 0;
+    border: 0px;
+    margin: 0px; }
+
+.popup decoration {
+  box-shadow: none;
+  border-radius: 0px;
+  border: none;
+  padding: 0; }
+.ssd decoration {
+  border-radius: 0px 0px 0 0; }
+  .ssd decoration.maximized {
+    border-radius: 0;
     padding: 0; }
-  .ssd decoration {
-    border-radius: 0px 0px 0 0; }
-    .ssd decoration.maximized {
-      border-radius: 0; }
-  tooltip.csd decoration {
-    border-radius: 0px;
-    box-shadow: none; }
-  .solid-csd decoration {
-    margin: 1px;
-    border-radius: 0px;
-    background-color: alpha(white, 0.95);
-    box-shadow: none; }
+tooltip.csd decoration {
+  border-radius: 0px;
+  box-shadow: none; }
+.solid-csd decoration {
+  margin: 1px;
+  border-radius: 0px;
+  background-color: alpha(white, 0.95);
+  box-shadow: none; }
 
 messagedialog {
   border-bottom-left-radius: 0px;
@@ -2276,12 +2272,16 @@ messagedialog {
     background-image: none;
     background-color: shade(#C0C0C0, 0.8); }
 
-window.ssd headerbar,
-window.ssd .titlebar {
+window.ssd headerbar, window.ssd .titlebar {
   padding: 0px;
   margin: 0px;
   border: 3px solid transparent;
   border-bottom: none; }
+window.ssd.maximized headerbar, window.ssd.maximized .titlebar {
+  border: 0px;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  margin: 0px; }
 
 .caja-desktop, .nemo-desktop.nemo-canvas-item, .nautilus-desktop.nautilus-canvas-item {
   color: #FFFFFF;
