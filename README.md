@@ -4,7 +4,7 @@
 
 GTK theme based on the classic appearance of Windows 95
 
-![win-95](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/449303749-orig-orig_2_orig.png)
+![windows-95](https://github.com/B00merang-Project/gallery/raw/master/Windows%2095%20(1).png)
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
