@@ -35,82 +35,48 @@ style "menu"
 class "GtkMenuBar*"             style "menubar"
 class "GtkMenu" style "menu"
 
-style "menuitem"
+style "toolbar"
 {
-### Menu item ###
-
+xthickness = 5
+ythickness = 1
 	engine "pixmap"
 	{
 		image
 		{
 			function = BOX
-			file = "menubar/menuitem.png"
-			border = {3, 3, 3, 3}
-			stretch	= TRUE
-		}
-		
-### H line ###
-		image 
-		{
-			function = HLINE
-	 		file = "menubar/line-h.png"
-			border = {0, 0, 0, 0}
+			file = "toolbar/toolbar.png"
+			border = {4, 4, 4, 4}
 			stretch = TRUE
 		}
-		
-### V line ###	
-		image 
-		{
-			function = VLINE
-	 		file = "menubar/line-v.png"
-			border = {0, 0, 0, 0}
-			stretch = TRUE
-		}
-		
-### Arrow UP ###
+	}
+}
+class "Gtk*Toolbar"			style "toolbar"
+
+style "handlebox" = "default"
+{
+xthickness = 0
+ythickness = 0
+	engine "pixmap"
+	{
 		image
 		{
-			function = ARROW
-			overlay_file = "/arrow/arrow-up.png"
-			overlay_border = {3,3,3,3}
+			function = HANDLE
+			overlay_file = "toolbar/handlebox-v.png"
+			overlay_border = {0, 0, 0, 0}
 			overlay_stretch = FALSE
-			arrow_direction	= UP
+			orientation = VERTICAL
 		}
 
-### Arrow DOWN ###
 		image
 		{
-			function = ARROW
-			overlay_file = "/arrow/arrow-down.png"
-			overlay_border = {3,3,3,3}
-			overlay_stretch	= FALSE
-			arrow_direction	= DOWN
-		}
-
-### Arrow LEFT ###
-		image
-		{
-			function = ARROW
-			overlay_file = "/arrow/arrow-left.png"
-			overlay_border = {3,3,3,3}
-			overlay_stretch	= FALSE
-			arrow_direction	= LEFT
-		}
-
-### Arrow RIGHT ###
-		image
-		{
-			function = ARROW
-			overlay_file = "/arrow/arrow-right.png"
-			overlay_border = {3,3,3,3}
-			overlay_stretch	= FALSE
-			arrow_direction	= RIGHT
+			function = HANDLE
+			overlay_file = "toolbar/handlebox-h.png"
+			overlay_border = {0, 0, 0, 0}
+			overlay_stretch = FALSE
+			orientation = HORIZONTAL
 		}
 	}
 }
 
-class "GtkMenuItem*" style "menuitem"
-class "GtkImageMenuItem*" style "menuitem"
-class "GtkTearoffMenuItem*" style "menuitem"
-class "GtkItem*" style "menuitem"
-
+#widget_class "*HandleBox"			style "handlebox"
+class "*HandleBox"			style "handlebox"
