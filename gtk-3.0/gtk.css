@@ -1425,6 +1425,10 @@ separator {
     min-height: 2px;
     background-color: shade(#C0C0C0, 0.65);
     background-image: linear-gradient(to bottom, shade(#C0C0C0, 0.65) 50%, white 50%); }
+  menu menuitem separator {
+    color: #C0C0C0;
+    background-image: none;
+    background-color: shade(#C0C0C0, 0.6); }
   popover separator {
     border: 0;
     color: alpha(currentColor, 0.5);
@@ -2206,13 +2210,14 @@ headerbar.selection-mode, toolbar.selection-mode {
 decoration {
   background-color: #C0C0C0;
   border-radius: 0px 0px 0 0;
-  border-style: solid;
+  border-width: 0;
   padding: 2px;
   box-shadow: inset -2px -2px shade(#C0C0C0, 0.85), inset 2px 2px mix(#C0C0C0, white, 0.55), inset -1px -1px #000000, inset 1px 1px mix(#C0C0C0, white, 0.7); }
-  .fullscreen decoration, .tiled decoration {
+  .fullscreen decoration, .tiled decoration, .maximized > decoration {
     border-radius: 0;
-    border: 0px;
-    margin: 0px; }
+    margin: 0px;
+    padding: 0;
+    box-shadow: none; }
   .popup decoration {
     box-shadow: none;
     border-radius: 0px;
@@ -2288,13 +2293,15 @@ messagedialog {
   .titlebar .titlebutton.close {
     background-image: url("assets/close.png"); }
   .titlebar .titlebutton.minimize {
-    background-image: url("assets/minimize.png");
-    margin-right: -6px; }
+    background-image: url("assets/minimize.png"); }
   .titlebar .titlebutton.maximize {
-    background-image: url("assets/maximize.png");
-    margin-right: -4px; }
+    background-image: url("assets/maximize.png"); }
   .maximized .titlebar .titlebutton.maximize {
     background-image: url("assets/restore.png"); }
+  .titlebar .horizontal.right .titlebutton.minimize {
+    margin-left: -6px; }
+  .titlebar .horizontal.right .titlebutton.maximize {
+    margin-left: -4px; }
   .tiled .titlebar:not(headerbar), .tiled .titlebar:backdrop:not(headerbar), .maximized .titlebar:not(headerbar), .maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0; }
 
