@@ -2251,25 +2251,30 @@ messagedialog {
     border-bottom-right-radius: 0px;
     box-shadow: 0 1px 2px alpha(black, 0.2); }
   messagedialog .titlebar.horizontal {
+    border: none;
     background-image: none;
     background-color: #C0C0C0; }
   messagedialog.csd .dialog-action-area button {
     padding: 10px;
     border-radius: 0;
     border-bottom-style: none;
-    background-image: none; }
+    background-image: none;
+    -gtk-outline-radius: 0; }
     messagedialog.csd .dialog-action-area button:last-child {
       border-right-width: 0;
       border-radius: 0px;
-      border-bottom-right-radius: 0px; }
+      border-bottom-right-radius: 0px;
+      -gtk-outline-radius: 0 0 0px 0; }
     messagedialog.csd .dialog-action-area button:first-child {
       border-left-width: 0;
       border-radius: 0px;
-      border-bottom-left-radius: 0px; }
+      border-bottom-left-radius: 0px;
+      -gtk-outline-radius: 0 0 0 0px; }
     messagedialog.csd .dialog-action-area button:only-child {
       border-radius: 0px;
       border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px; }
+      border-bottom-right-radius: 0px;
+      -gtk-outline-radius: 0 0 0px 0px; }
 
 .titlebar {
   border-bottom: none;
