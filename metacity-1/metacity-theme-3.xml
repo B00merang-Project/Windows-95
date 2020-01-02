@@ -113,7 +113,7 @@ Notes: Modified from WinME theme by Perberos.
 				<line color="#ffffff" x1="1" y1="1" x2="width-2" y2="1" width="1"/>
 				<line color="#000000" x1="width-1" y1="0" x2="width-1" y2="height" width="1"/>
 				<line color="#808080" x1="width-2" y1="1" x2="width-2" y2="height" width="1"/>
-                <rectangle color="gtk:bg[SELECTED]" x="4" y="4" width="width-8" height="height-5" filled="true"/>
+        <rectangle color="#000080" x="4" y="4" width="width-8" height="height-5" filled="true"/>
 			</draw_ops>
 		</piece>
 
@@ -182,7 +182,7 @@ Notes: Modified from WinME theme by Perberos.
 	<frame_style name="normal(maximized)_focused_style" geometry="borderless_geometry" parent="normal_focused_style">
 		<piece position="titlebar">
 			<draw_ops>
-                <rectangle color="gtk:bg[SELECTED]" x="0" y="0" width="width-0" height="height-0" filled="true"/>
+         <rectangle color="#000080" x="0" y="0" width="width-0" height="height-0" filled="true"/>
 			</draw_ops>
 		</piece>
 		<button function="maximize" state="normal">
@@ -206,7 +206,7 @@ Notes: Modified from WinME theme by Perberos.
 				<line color="#ffffff" x1="1" y1="1" x2="width-2" y2="1" width="1"/>
 				<line color="#000000" x1="width-1" y1="0" x2="width-1" y2="height" width="1"/>
 				<line color="#808080" x1="width-2" y1="1" x2="width-2" y2="height" width="1"/>
-                <rectangle color="#808080" x="4" y="4" width="width-8" height="height-5" filled="true"/>
+        <rectangle color="#808080" x="4" y="4" width="width-8" height="height-5" filled="true"/>
 			</draw_ops>
 		</piece>
 		<piece position="title">
@@ -219,7 +219,7 @@ Notes: Modified from WinME theme by Perberos.
 	<frame_style name="normal(maximized)_unfocused_style" geometry="borderless_geometry" parent="normal_unfocused_style">
 		<piece position="titlebar">
 			<draw_ops>
-                <rectangle color="#808080" x="0" y="0" width="width-0" height="height-0" filled="true"/>
+          <rectangle color="#808080" x="0" y="0" width="width-0" height="height-0" filled="true"/>
 			</draw_ops>
 		</piece>
 		<button function="maximize" state="normal">
