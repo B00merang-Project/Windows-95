@@ -2226,6 +2226,18 @@ messagedialog {
     color: #FFFFFF;
     text-shadow: none; }
 
+XfdesktopIconView .view {
+  border-radius: 0px;
+  color: #FFFFFF;
+  background-color: transparent;
+  text-shadow: 1px 1px alpha(black, 0.8); }
+  XfdesktopIconView .view:active {
+    color: #FFFFFF; }
+XfdesktopIconView:active {
+  color: #FFFFFF;
+  text-shadow: none;
+  background-color: #000080; }
+
 panel-toplevel.background, panel-toplevel.background menubar {
   background-color: #C0C0C0;
   color: #000000; }
