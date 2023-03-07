@@ -1180,57 +1180,57 @@ notebook {
 
 scrollbar {
   border: none;
-  background-color: #C0C0C0; }
-  scrollbar trough {
-    border: none;
-    border-radius: 0; }
-  scrollbar button, scrollbar button:backdrop, scrollbar button:active, scrollbar button:active:backdrop, scrollbar button:disabled, scrollbar button:disabled:backdrop {
-    color: transparent;
-    padding: 0;
-    background-size: auto;
-    background-position: center center;
-    background-repeat: no-repeat; }
-  scrollbar.overlay-indicator {
-    opacity: 1; }
-  scrollbar.horizontal slider {
-    min-width: 45px;
-    min-height: 14px;
-    margin: 0;
-    border: 1px solid #000000;
-    border-top-color: #ececec;
-    border-left-color: #ececec;
-    border-radius: 0px;
-    background-clip: padding-box;
-    background-color: #C0C0C0;
-    box-shadow: inset -1px 0 #7d7d7d, inset 0 -1px #7d7d7d, inset 1px 0 #ececec, inset 0 1px #ececec; }
-  scrollbar.horizontal button {
-    min-height: 14px;
-    min-width: 14px; }
-    scrollbar.horizontal button.down {
-      background-image: url("assets/arrow-right.png"); }
-    scrollbar.horizontal button.up {
-      background-image: url("assets/arrow-left.png"); }
-  scrollbar.vertical slider {
+  background-color: #C0C0C0;
+  /*
+  &.horizontal button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+  }
+
+  &.vertical button {
+    &.down { -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+    &.up { -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  }
+  */ }
+  scrollbar > range > trough > slider {
+    margin: 0px;
     min-width: 14px;
-    min-height: 45px;
-    margin: 0;
+    min-height: 14px;
+    border-radius: 0px;
     border: 1px solid #000000;
     border-top-color: #ececec;
     border-left-color: #ececec;
-    border-radius: 0px;
-    background-clip: padding-box;
     background-color: #C0C0C0;
+    background-clip: padding-box;
     box-shadow: inset -1px 0 #7d7d7d, inset 0 -1px #7d7d7d, inset 1px 0 #ececec, inset 0 1px #ececec; }
-  scrollbar.vertical button {
+  scrollbar.horizontal > range > trough > slider {
+    min-width: 45px; }
+  scrollbar.vertical > range > trough > slider {
+    min-height: 45px; }
+  scrollbar > range.fine-tune > trough > slider {
+    min-width: 14px;
     min-height: 14px;
-    min-width: 14px; }
-    scrollbar.vertical button.down {
-      background-image: url("assets/arrow-down.png"); }
-    scrollbar.vertical button.up {
-      background-image: url("assets/arrow-up.png"); }
-  treeview ~ scrollbar.vertical {
-    border-top: 1px solid #000000;
-    margin-top: -1px; }
+    border-radius: 0px; }
+  scrollbar > range.fine-tune.horizontal > trough > slider {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  scrollbar > range.fine-tune.vertical > trough > slider {
+    margin-left: 0px;
+    margin-right: 0px; }
+  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
+    opacity: 1.0; }
+    scrollbar.overlay-indicator.horizontal:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 45px;
+      min-height: 14px; }
+    scrollbar.overlay-indicator.vertical:not(.dragging):not(.hovering) > range > trough > slider {
+      min-width: 14px;
+      min-height: 45px; }
+  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
+    opacity: 1; }
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid #000000;
+  margin-top: -1px; }
 
 switch {
   outline-offset: -4px;
