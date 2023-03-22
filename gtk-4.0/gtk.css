@@ -546,7 +546,7 @@ button.suggested-action {
   button.suggested-action:active {
     box-shadow: 0 0 0 1px #000000, inset 1px 0 #7d7d7d, inset 0 1px #7d7d7d, inset -1px 0 #ececec, inset 0 -1px #ececec; }
 
-modelbutton.flat {
+modelbutton {
   min-height: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -555,26 +555,28 @@ modelbutton.flat {
   background-color: transparent;
   background-image: none;
   box-shadow: none; }
-  modelbutton.flat:hover {
+  modelbutton:hover {
     color: #FFFFFF;
     background-color: #000080; }
-  modelbutton.flat:selected {
+  modelbutton:selected {
     color: #FFFFFF;
     background-color: #000080; }
-  modelbutton.flat:disabled {
+  modelbutton:disabled {
     color: #606060; }
-  modelbutton.flat > image {
+  modelbutton > image {
     padding-right: 4px; }
-  modelbutton.flat arrow {
+  modelbutton arrow {
     background: none;
     min-width: 16px;
     min-height: 16px;
     opacity: 0.3; }
-    modelbutton.flat arrow:hover {
+    modelbutton arrow:hover {
       background: none; }
-    modelbutton.flat arrow.left {
+    modelbutton arrow:disabled {
+      opacity: 0.15; }
+    modelbutton arrow.left {
       -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton.flat arrow.right {
+    modelbutton arrow.right {
       -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 button.link,
@@ -995,35 +997,34 @@ columnview.view > header > button, treeview.view > header > button, columnview.v
     border-right-style: none; }
 
 popover.background {
-  background-color: transparent;
-  font: initial; }
-  popover.background > arrow,
-  popover.background > contents {
-    background-color: #C0C0C0;
-    background-clip: padding-box;
-    border: 1px solid #000000;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
-  popover.background:backdrop {
+  font: initial;
+  background-color: transparent; }
+
+popover > arrow,
+popover > contents {
+  border: 1px solid #000000;
+  color: #000000;
+  background-color: #C0C0C0;
+  background-clip: padding-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+
+popover > contents {
+  padding: 8px;
+  border-radius: 0px; }
+  popover > contents > list,
+  popover > contents > .view,
+  popover > contents > iconview,
+  popover > contents > toolbar {
+    border-style: none;
     background-color: transparent; }
-  popover.background > contents {
-    padding: 8px;
-    border-radius: 0px; }
-    popover.background > contents > list,
-    popover.background > contents > .view,
-    popover.background > contents > iconview,
-    popover.background > contents > .toolbar {
-      border-style: none;
-      background-color: transparent; }
-    popover.background > contents separator {
-      background-color: #000000;
-      margin: 3px; }
-    popover.background > contents list separator {
-      margin: 0; }
+  popover > contents separator {
+    margin: 3px;
+    background-color: #000000; }
 
 magnifier {
   background-color: #FFFFFF; }
 
-menu, .menu {
+popover.menu menu, popover.menu .menu {
   margin: 4px;
   padding: 4px 4px;
   border-radius: 0px;
@@ -1033,7 +1034,7 @@ menu, .menu {
   color: #000000;
   background-color: #C0C0C0;
   box-shadow: inset -1px 0 #7d7d7d, inset 0 -1px #7d7d7d, inset 1px 0 #ececec, inset 0 1px #ececec; }
-  menu menuitem, .menu menuitem {
+  popover.menu menu menuitem, popover.menu .menu menuitem {
     min-height: 16px;
     min-width: 40px;
     padding: 4px;
@@ -1041,21 +1042,32 @@ menu, .menu {
     border-radius: 0;
     color: #000000;
     background-color: #C0C0C0; }
-    menu menuitem:hover, .menu menuitem:hover {
+    popover.menu menu menuitem:hover, popover.menu .menu menuitem:hover {
       color: #FFFFFF;
       background-color: #000080; }
-      menu menuitem:hover switch slider, menu menuitem:hover scale highlight, menu menuitem:hover scale slider, .menu menuitem:hover switch slider, .menu menuitem:hover scale highlight, .menu menuitem:hover scale slider {
+      popover.menu menu menuitem:hover switch slider, popover.menu menu menuitem:hover scale highlight, popover.menu menu menuitem:hover scale slider, popover.menu .menu menuitem:hover switch slider, popover.menu .menu menuitem:hover scale highlight, popover.menu .menu menuitem:hover scale slider {
         background-color: #FFFFFF; }
-      menu menuitem:hover scale trough, menu menuitem:hover switch, .menu menuitem:hover scale trough, .menu menuitem:hover switch {
+      popover.menu menu menuitem:hover scale trough, popover.menu menu menuitem:hover switch, popover.menu .menu menuitem:hover scale trough, popover.menu .menu menuitem:hover switch {
         background-color: rgba(255, 255, 255, 0.75); }
-    menu menuitem:disabled, .menu menuitem:disabled {
+    popover.menu menu menuitem:disabled, popover.menu .menu menuitem:disabled {
       color: #606060; }
-    menu menuitem accelerator, .menu menuitem accelerator {
+    popover.menu menu menuitem accelerator, popover.menu .menu menuitem accelerator {
       color: alpha(currentColor, 0.55); }
-      menu menuitem accelerator:hover, .menu menuitem accelerator:hover {
+      popover.menu menu menuitem accelerator:hover, popover.menu .menu menuitem accelerator:hover {
         color: rgba(255, 255, 255, 0.8); }
-      menu menuitem accelerator:disabled, .menu menuitem accelerator:disabled {
+      popover.menu menu menuitem accelerator:disabled, popover.menu .menu menuitem accelerator:disabled {
         color: #606060; }
+
+popover.menu accelerator {
+  color: alpha(currentColor, 0.55); }
+  popover.menu accelerator:hover {
+    color: rgba(255, 255, 255, 0.8); }
+  popover.menu accelerator:disabled {
+    color: #606060; }
+  popover.menu accelerator:dir(ltr) {
+    margin-left: 4px; }
+  popover.menu accelerator:dir(rtl) {
+    margin-right: 4px; }
 
 menubar {
   padding: 0px;
@@ -2249,23 +2261,6 @@ popover.entry-completion > contents {
 
 statusbar {
   padding: 4px; }
-
-menubutton > button > box {
-  border-spacing: 6px; }
-
-menubutton arrow {
-  min-height: 16px;
-  min-width: 16px; }
-  menubutton arrow.none {
-    -gtk-icon-source: -gtk-icontheme("open-menu-symbolic"); }
-  menubutton arrow.down {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-  menubutton arrow.up {
-    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-  menubutton arrow.left {
-    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-  menubutton arrow.right {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 .floating-bar {
   border: 1px solid #000000;
