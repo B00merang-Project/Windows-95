@@ -1525,20 +1525,21 @@ progressbar {
   color: gray; }
   progressbar > trough {
     padding: 2px;
-    border: 1px solid #000000;
     border-radius: 0px;
-    background-color: #C0C0C0;
+    border: 1px solid #000000;
     border-bottom-color: #ececec;
     border-right-color: #ececec;
+    background-color: #C0C0C0;
     box-shadow: inset 1px 0 #7d7d7d, inset 0 1px #7d7d7d, inset -1px 0 #ececec, inset 0 -1px #ececec; }
   progressbar > trough > progress {
-    border: none;
     border-radius: 0px;
-    background-image: linear-gradient(to right, transparent, transparent 37.5%, #C0C0C0 37.5%, #C0C0C0 50%, transparent 50%, transparent 87.5%, #C0C0C0 87.5%, #C0C0C0 100%), image(#000080);
-    background-size: 20px 16px, auto; }
+    border: none; }
   progressbar.vertical > trough > progress {
     background-image: linear-gradient(to bottom, transparent, transparent 37.5%, #C0C0C0 37.5%, #C0C0C0 50%, transparent 50%, transparent 87.5%, #C0C0C0 87.5%, #C0C0C0 100%), image(#000080);
     background-size: 16px 20px, auto; }
+  progressbar.horizontal > trough > progress {
+    background-image: linear-gradient(to right, transparent, transparent 37.5%, #C0C0C0 37.5%, #C0C0C0 50%, transparent 50%, transparent 87.5%, #C0C0C0 87.5%, #C0C0C0 100%), image(#000080);
+    background-size: 20px 16px, auto; }
   progressbar.horizontal > trough {
     min-width: 150px; }
   progressbar.vertical > trough {
