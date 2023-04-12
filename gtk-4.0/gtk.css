@@ -640,9 +640,6 @@ toolbar {
   toolbar:backdrop {
     color: #000000;
     background-color: #C0C0C0; }
-  toolbar:disabled {
-    color: #606060;
-    background-color: #b6b6b6; }
   toolbar button.flat {
     border-color: transparent;
     border-radius: 0px;
@@ -757,40 +754,53 @@ infobar .close {
   infobar .close:active {
     background-color: rgba(0, 0, 0, 0.05); }
 
-headerbar, headerbar:not(.titlebar) {
-  padding: 2px;
+headerbar,
+headerbar:not(.titlebar) {
   min-height: 26px;
+  padding: 2px;
   color: #FFFFFF;
-  background-color: #000080; }
-  headerbar:backdrop, headerbar:not(.titlebar):backdrop {
+  background-color: #000080;
+  background-image: none;
+  box-shadow: none; }
+  headerbar:backdrop,
+  headerbar:not(.titlebar):backdrop {
     color: #000000;
     background-image: none;
     background-color: #9a9a9a; }
   .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop, .tiled headerbar:not(.titlebar), .tiled headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar), .maximized headerbar:not(.titlebar):backdrop {
     border-radius: 0; }
-  separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop, separator:first-child + headerbar:not(.titlebar), separator:first-child + headerbar:not(.titlebar):backdrop, headerbar:not(.titlebar):first-child, headerbar:not(.titlebar):first-child:backdrop {
+  separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop, separator:first-child + headerbar:not(.titlebar), separator:first-child + headerbar:not(.titlebar):backdrop,
+  headerbar:not(.titlebar):first-child,
+  headerbar:not(.titlebar):first-child:backdrop {
     border-top-left-radius: 0px; }
     .maximized separator:first-child + headerbar, .tiled separator:first-child + headerbar, .maximized separator:first-child + headerbar:backdrop, .tiled separator:first-child + headerbar:backdrop, .maximized headerbar:first-child, .tiled headerbar:first-child, .maximized headerbar:first-child:backdrop, .tiled headerbar:first-child:backdrop, .maximized separator:first-child + headerbar:not(.titlebar), .tiled separator:first-child + headerbar:not(.titlebar), .maximized separator:first-child + headerbar:not(.titlebar):backdrop, .tiled separator:first-child + headerbar:not(.titlebar):backdrop, .maximized headerbar:not(.titlebar):first-child, .tiled headerbar:not(.titlebar):first-child, .maximized headerbar:not(.titlebar):first-child:backdrop, .tiled headerbar:not(.titlebar):first-child:backdrop {
       border-radius: 0; }
-  headerbar:last-child, headerbar:last-child:backdrop, headerbar:not(.titlebar):last-child, headerbar:not(.titlebar):last-child:backdrop {
+  headerbar:last-child, headerbar:last-child:backdrop,
+  headerbar:not(.titlebar):last-child,
+  headerbar:not(.titlebar):last-child:backdrop {
     border-top-right-radius: 0px; }
     .maximized headerbar:last-child, .tiled headerbar:last-child, .maximized headerbar:last-child:backdrop, .tiled headerbar:last-child:backdrop, .maximized headerbar:not(.titlebar):last-child, .tiled headerbar:not(.titlebar):last-child, .maximized headerbar:not(.titlebar):last-child:backdrop, .tiled headerbar:not(.titlebar):last-child:backdrop {
       border-radius: 0; }
-  headerbar .title, headerbar:not(.titlebar) .title {
+  headerbar .title,
+  headerbar:not(.titlebar) .title {
     padding-left: 12px;
     padding-right: 12px;
     font-weight: bold;
     color: #FFFFFF; }
-    headerbar .title:backdrop, headerbar:not(.titlebar) .title:backdrop {
+    headerbar .title:backdrop,
+    headerbar:not(.titlebar) .title:backdrop {
       color: #000000; }
-  headerbar .subtitle, headerbar:not(.titlebar) .subtitle {
+  headerbar .subtitle,
+  headerbar:not(.titlebar) .subtitle {
     font-size: smaller;
     padding-left: 12px;
     padding-right: 12px;
     color: rgba(255, 255, 255, 0.7); }
-    headerbar .subtitle:backdrop, headerbar:not(.titlebar) .subtitle:backdrop {
+    headerbar .subtitle:backdrop,
+    headerbar:not(.titlebar) .subtitle:backdrop {
       color: rgba(0, 0, 0, 0.7); }
-  headerbar.titlebar, .titlebar headerbar, headerbar.titlebar:not(.titlebar), .titlebar headerbar:not(.titlebar) {
+  headerbar.titlebar, .titlebar headerbar,
+  headerbar.titlebar:not(.titlebar), .titlebar headerbar:not(.titlebar) {
     border-radius: 0px 0px 0px 0px; }
 
 windowcontrols {
@@ -1749,13 +1759,11 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
     border-spacing: 12px; }
 
 .app-notification {
+  margin: 5px;
   border: 1px solid #000000;
-  background-color: #FFFFFF;
   color: #000000;
-  padding: 8px;
-  margin: 5px; }
-  .app-notification border {
-    border: none; }
+  background-color: #FFFFFF;
+  padding: 8px; }
 
 expander {
   min-width: 16px;
@@ -2172,7 +2180,7 @@ shortcut > .keycap {
   font-size: smaller; }
 
 stackswitcher > button.text-button {
-  min-width: 100px; }
+  min-width: 120px; }
 
 stackswitcher.circular {
   border-spacing: 12px; }
