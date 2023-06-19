@@ -475,6 +475,7 @@ editablelabel > stack > text > selection {
     color: #000000;
     background-color: #000080; }
 
+
 button {
   padding: 2px 4px;
   border-radius: 0px;
@@ -484,53 +485,164 @@ button {
   color: #000000;
   background-color: #C0C0C0;
   background-image: none;
+  text-shadow: none;
   box-shadow: inset -1px -1px #7d7d7d;
-  text-shadow: none; }
-  button:active, button:checked {
-    color: #000000;
+  -gtk-icon-shadow: none; }
+  
+  button:hover {
     border-color: #000000;
+    border-top-color: white;
+    border-left-color: white;
+    color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: inset -1px -1px #7d7d7d; }
+  
+  button:active {
+    border-color: #000000;
+    color: #000000;
     background-color: #C0C0C0;
     background-image: none;
     box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
-    button:active:disabled, button:checked:disabled {
-      color: #0a0a0a;
-      border-color: #9b9b9b;
-      background-color: #a4a4a4; }
-  button:disabled {
-    color: #303030; }
-  button.flat {
-    border-color: transparent;
-    border-radius: 0px;
+  
+  button:checked {
+    border-color: #000000;
     color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
+  
+  button:checked:disabled {
+    border-color: #9b9b9b;
+    color: #606060;
+    background-color: #a4a4a4; }
+  
+  button:disabled {
+    color: #606060; }
+
+toolbar button,
+.toolbar button,
+button.flat {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+  -gtk-icon-shadow: none; }
+  toolbar button:backdrop,
+  .toolbar button:backdrop, toolbar button:disabled,
+  .toolbar button:disabled,
+  button.flat:backdrop,
+  button.flat:disabled,
+  button.flat:disabled:backdrop {
+    border-color: transparent;
     background-color: transparent;
     background-image: none;
+    text-shadow: none;
     box-shadow: none;
-    text-shadow: none; }
-    button.flat:hover {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      border-top-color: white;
-      border-left-color: white;
-      box-shadow: inset -1px -1px #7d7d7d; }
-    button.flat:active, button.flat:checked {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      background-image: none;
-      box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
-    button.flat:disabled {
-      border-color: transparent;
-      color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
+    -gtk-icon-shadow: none; }
+  toolbar button:hover,
+  .toolbar button:hover,
+  button.flat:hover {
+    border-color: #000000;
+    border-top-color: white;
+    border-left-color: white;
+    color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: inset -1px -1px #7d7d7d; }
+  toolbar button:active,
+  .toolbar button:active,
+  button.flat:active {
+    border-color: #000000;
+    color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
+  toolbar button:checked,
+  .toolbar button:checked,
+  button.flat:checked {
+    border-color: #000000;
+    color: #000000;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
+  toolbar button:checked:disabled,
+  .toolbar button:checked:disabled,
+  button.flat:checked:disabled {
+    border-color: #9b9b9b;
+    color: #606060;
+    background-color: #a4a4a4; }
 
 button.destructive-action {
-  color: #ff0000; }
+  padding: 2px 4px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  border-top-color: white;
+  border-left-color: white;
+  color: #b81414;
+  background-color: #C0C0C0;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: inset -1px -1px #7d7d7d;
+  -gtk-icon-shadow: none; }
+  button.destructive-action:hover {
+    border-color: #000000;
+    border-top-color: white;
+    border-left-color: white;
+    color: #b81414;
+    background-color: #C0C0C0;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: inset -1px -1px #7d7d7d; }
+  button.destructive-action:active {
+    border-color: #000000;
+    color: #b81414;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
+  button.destructive-action:checked {
+    border-color: #000000;
+    color: #b81414;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
 
 button.suggested-action {
-  box-shadow: 0 0 0 1px #000000, inset -1px -1px #7d7d7d, inset 1px 1px #ececec; }
+  padding: 2px 4px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  border-top-color: white;
+  border-left-color: white;
+  color: #000080;
+  background-color: #C0C0C0;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: inset -1px -1px #7d7d7d;
+  -gtk-icon-shadow: none; }
+  button.suggested-action:hover {
+    border-color: #000000;
+    border-top-color: white;
+    border-left-color: white;
+    color: #000080;
+    background-color: #C0C0C0;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: inset -1px -1px #7d7d7d; }
   button.suggested-action:active {
-    box-shadow: 0 0 0 1px #000000, inset 1px 1px #7d7d7d, inset -1px -1px #ececec; }
+    border-color: #000000;
+    color: #000080;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
+  button.suggested-action:checked {
+    border-color: #000000;
+    color: #000080;
+    background-color: #C0C0C0;
+    background-image: none;
+    box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
 
 button.link,
 link {
@@ -567,90 +679,102 @@ button.link, button.link:hover, button.link:active, button.link:checked {
 button.link > label {
   text-decoration: underline; }
 
-spinbutton:disabled {
-  color: #606060; }
-
-spinbutton.horizontal {
+spinbutton:not(.vertical) {
+  padding: 0px 4px;
   border-radius: 0px;
   border: 1px solid #000000;
-  border-bottom-color: #ececec;
-  border-right-color: #ececec;
+  border-bottom-color: white;
+  border-right-color: white;
+  color: #000000;
   background-color: #FFFFFF;
-  box-shadow: inset 1px 1px black, inset -1px -1px #ececec; }
-  spinbutton.horizontal:disabled {
+  box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px #C0C0C0;
+  min-height: 28px;
+  padding: 0px; }
+  spinbutton:not(.vertical):focus {
+    border-color: #000080; }
+  spinbutton:not(.vertical) > text {
+    min-height: 0px;
+    padding: 3px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    border-color: transparent;
+    padding: 7px;
+    min-width: 36px; }
+    spinbutton:not(.vertical) > text > selection {
+      background-color: #000080;
+      color: #FFFFFF; }
+      spinbutton:not(.vertical) > text > selection:focus-within {
+        background-color: #000080;
+        color: #FFFFFF; }
+  spinbutton:not(.vertical) > button {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+    padding: 4px 6px;
+    border-radius: 0px;
+    box-shadow: -1px 0 #000000; }
+    spinbutton:not(.vertical) > button.up {
+      border-radius: 0 0px 0px 0; }
+    spinbutton:not(.vertical) > button:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+  spinbutton:not(.vertical):disabled {
+    border-color: #929292;
+    border-bottom-color: #e6e6e6;
+    border-right-color: #e6e6e6;
     color: #606060;
     background-color: #e6e6e6; }
-    spinbutton.horizontal:disabled:backdrop {
-      color: #606060;
-      background-color: #e6e6e6; }
-  spinbutton.horizontal:backdrop {
-    background-color: #FFFFFF; }
-  spinbutton.horizontal entry {
-    border: none;
-    box-shadow: none;
-    padding: 7px 15px;
-    background: none;
-    border-radius: 0px 0 0 0px; }
-    spinbutton.horizontal entry:disabled {
-      background: none; }
-    spinbutton.horizontal entry:focus {
-      box-shadow: none; }
-  spinbutton.horizontal button {
-    border: none;
-    border-radius: 0;
-    background: none;
-    box-shadow: -1px 0 #000000; }
-    spinbutton.horizontal button:disabled, spinbutton.horizontal button:backdrop {
-      box-shadow: -1px 0 #000000; }
-    spinbutton.horizontal button.up {
-      border-radius: 0 0px 0px 0; }
 
-spinbutton.vertical entry {
+spinbutton.vertical > text {
+  padding: 0px 4px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  border-bottom-color: white;
+  border-right-color: white;
+  color: #000000;
+  background-color: #FFFFFF;
+  box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px #C0C0C0;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0;
   border-radius: 0; }
+  spinbutton.vertical > text > selection {
+    background-color: #000080;
+    color: #FFFFFF; }
+    spinbutton.vertical > text > selection:focus-within {
+      background-color: #000080;
+      color: #FFFFFF; }
 
-spinbutton.vertical button.up {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-width: 0; }
+spinbutton.vertical > button {
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0; }
+  spinbutton.vertical > button.up {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width: 0; }
+  spinbutton.vertical > button.down {
+    border-top-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
 
-spinbutton.vertical button.down {
-  border-top-width: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0; }
+spinbutton.vertical:drop(active) {
+  border-color: transparent;
+  box-shadow: none; }
 
-toolbar {
+toolbar,
+.toolbar {
   padding: 4px;
   border: none;
   color: #000000;
   background-color: #C0C0C0; }
-  toolbar:backdrop {
+  toolbar:backdrop,
+  .toolbar:backdrop {
     color: #000000;
     background-color: #C0C0C0; }
-  toolbar button.flat {
-    border-color: transparent;
-    border-radius: 0px;
-    color: #000000;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-    text-shadow: none; }
-    toolbar button.flat:hover {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      border-top-color: white;
-      border-left-color: white;
-      box-shadow: inset -1px -1px #7d7d7d; }
-    toolbar button.flat:active, toolbar button.flat:checked {
-      color: #000000;
-      border-color: #000000;
-      background-color: #C0C0C0;
-      background-image: none;
-      box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
-    toolbar button.flat:disabled {
-      border-color: transparent;
-      color: rgba(0, 0, 0, 0.8);
-      background-color: transparent; }
 
 searchbar {
   border-width: 0 0 1px 0;
@@ -1881,7 +2005,8 @@ calendar {
       calendar > header > button:hover {
         color: #000000; }
       calendar > header > button:backdrop {
-        color: #000000; }
+        color: #000000;
+        background: none; }
       calendar > header > button:disabled {
         color: #606060; }
   calendar > grid > label.today {
@@ -1984,6 +2109,10 @@ paned > separator {
   background-size: 1px 1px; }
   paned > separator:selected {
     background-image: image(#000080); }
+  paned > separator:backdrop {
+    background-color: transparent;
+    background-image: image(#000000);
+    background-size: 1px 1px; }
   paned > separator.wide {
     min-width: 5px;
     min-height: 5px;
