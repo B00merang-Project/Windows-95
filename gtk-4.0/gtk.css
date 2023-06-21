@@ -477,7 +477,9 @@ editablelabel > stack > text > selection {
 
 
 button {
-  padding: 2px 4px;
+  padding: 4px 6px;
+  min-width: 14px;
+  min-height: 18px;
   border-radius: 0px;
   border: 1px solid #000000;
   border-top-color: white;
@@ -577,8 +579,6 @@ button.flat {
     background-color: #a4a4a4; }
 
 button.destructive-action {
-  padding: 2px 4px;
-  border-radius: 0px;
   border: 1px solid #000000;
   border-top-color: white;
   border-left-color: white;
@@ -611,8 +611,6 @@ button.destructive-action {
     box-shadow: inset 1px 1px #7d7d7d, inset -1px -1px white; }
 
 button.suggested-action {
-  padding: 2px 4px;
-  border-radius: 0px;
   border: 1px solid #000000;
   border-top-color: white;
   border-left-color: white;
